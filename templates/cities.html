@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cities</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+	<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+	<script type="text/javascript" src='{{url_for("static",filename="js/cities.js")}}'></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+
+			cities = {'new-york': 'New York',
+					 'paris': 'Paris',
+					 'cairo': 'Cairo',
+					 'rome': 'Rome'
+					 } // TODO: get this from Ajax call to server
+			IMG_PATH = "{{url_for('static', filename='img/CITY.jpg')}}";
+			
+			draw_img(cities, IMG_PATH);
+
+			$('.fig-container img').hover(
+				img_mousover,
+				img_mousout
+			);
+		})
+
+	</script>
+</head>
+<body>
+
+<header></header>
+
+<main>
+	<!--<div class="fig-container">
+		<div class="img-container"><a href="/cities/new-york"><img src="{{url_for('static', filename='img/new-york.jpg')}}" id="new-york"></a></div>
+		<p>New York</p>
+	</div>
+	
+	<div class="fig-container">
+		<div class="img-container"><a href="/cities/paris"><img src="{{url_for('static', filename='img/paris.jpg')}}" id="paris"></a></div>
+		<p>Paris</p>
+	</div>
+	
+	<div class="fig-container">
+		<div class="img-container"><a href="/cities/cairo"><img src="{{url_for('static', filename='img/cairo.jpg')}}" id="cairo"></a></div>
+		<p>Cairo</p>
+	</div>
+	
+	<div class="fig-container">
+		<div class="img-container"><a href="/cities/rome"><img src="{{url_for('static', filename='img/rome.jpg')}}" id="rome"></a></div>
+		<p>Rome</p>
+	</div>-->
+
+</main>
+
+
+<footer></footer>
+
+</body>
+</html>
